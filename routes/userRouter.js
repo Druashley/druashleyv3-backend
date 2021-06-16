@@ -72,7 +72,9 @@ router.post("/login", async (req, res) => {
         id: user._id,
         firstName: user.firstName,
         lastName: user.lastName,
+        role: user.role,
       },
+      role: user.role,
     });
   } catch (err) {
     res.status(500).json({ error: err.message });
@@ -110,6 +112,7 @@ router.get("/", auth, async (req, res) => {
   res.json({
     displayName: user.displayName,
     id: user._id,
+    role: user.role,
   });
 });
 
