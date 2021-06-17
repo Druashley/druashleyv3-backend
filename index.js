@@ -31,3 +31,5 @@ mongoose.connect(
 // Routes
 
 app.use("/users", require("./routes/userRouter"));
+
+app.use("/journal", require("./routes/journalRouter"));
